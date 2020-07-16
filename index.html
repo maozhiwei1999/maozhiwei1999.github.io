@@ -152,6 +152,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-UIAppearance" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/16/UIAppearance/">UIAppearance</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/16/UIAppearance/" class="archive-article-date">
+  	<time datetime="2020-07-16T14:46:58.092Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="UIAppearance"><a href="#UIAppearance" class="headerlink" title="UIAppearance"></a>UIAppearance</h2><p>遵守了 UIAppearance协议，实现其中方法。就可以调用UIAppearance方法。</p>
+<p>假如：一个TabBarController 有5个子控制器，分别对应5个item。<br>如果希望修改这些item的属性，比如说选中item时，文字不会变蓝(不渲染)。一种方法是，调用item的 <code>setTitleTextAttributes</code> 方法。这个方法需要提供一个字典对象的参数和选中状态：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	setTitleTextAttributes 方法介绍：</span></span><br><span class="line"><span class="comment">- (void)setTitleTextAttributes:(NSDictionary&lt;NSAttributedStringKey, id&gt; *)attributes forState:(UIControlState)state;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>修改方案：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIViewController</span> * vc = [[<span class="built_in">UIViewController</span> alloc] init];</span><br><span class="line">vc.tabBarItem.title = <span class="string">@"title1"</span>;</span><br><span class="line">vc.tarBarItem.image = [<span class="built_in">UIImage</span> imageName:<span class="string">@"image1"</span>]</span><br><span class="line"><span class="comment">//开始设置 tabBarItem 文字属性</span></span><br><span class="line"><span class="built_in">NSMutableDictionary</span> * attrs =[<span class="built_in">NSMutableDictionary</span> dictionary];</span><br><span class="line">attrs[<span class="built_in">NSForegroundColorAttributeName</span>] = [<span class="built_in">UIColor</span> balckColor];</span><br><span class="line">[vc.tabBarItem setTitleAttributes: attrs forState: <span class="built_in">UIControlStateSelected</span>];</span><br></pre></td></tr></table></figure>
+<p>每存在一个item，就需要进行一次设置。<br>本着简化代码的原则，希望能设置一次就全部应用到item上，这个时候就用上了UIAppearance。<br>在load方法里实现这个设置(load方法只会调用一次) <strong>关于load方法还需要进一步学习</strong></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="keyword">void</span>)load&#123;</span><br><span class="line">	<span class="comment">//	获取 tabbaritem</span></span><br><span class="line">	<span class="built_in">UITabBarItem</span> * item = [<span class="built_in">UITabBarItem</span> appearance];</span><br><span class="line">	<span class="built_in">NSMutableDictionary</span> * attrs =[<span class="built_in">NSMutableDictionary</span> dictionary];</span><br><span class="line">	attrs[<span class="built_in">NSForegroundColorAttributeName</span>] = [<span class="built_in">UIColor</span> balckColor];</span><br><span class="line">	[item setTitleAttributes:attrs forState: <span class="built_in">UIControlSelected</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是这样写的问题在于，会修改整个应用程序中的item的属性，如果只希望修改本控制器下的item的属性，可以做如下修改：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="keyword">void</span>)load&#123;</span><br><span class="line">	<span class="comment">//	获取 tabbaritem</span></span><br><span class="line">	<span class="built_in">UITabBarItem</span> * item = [<span class="built_in">UITabBarItem</span> appearanceWhenContainedIn:<span class="keyword">self</span>,<span class="literal">nil</span>];</span><br><span class="line">	<span class="built_in">NSMutableDictionary</span> * attrs =[<span class="built_in">NSMutableDictionary</span> dictionary];</span><br><span class="line">	attrs[<span class="built_in">NSForegroundColorAttributeName</span>] = [<span class="built_in">UIColor</span> balckColor];</span><br><span class="line">	[item setTitleAttributes:attrs forState: <span class="built_in">UIControlSelected</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就只会修改self的item的属性。 <code>appearanceWhenContainedIn</code><br>这个方法在iOS9之后就过时了<br>可以用<code>appearanceWhenContainedInInstancesOfClasses</code> 方法来代替。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/16/UIAppearance/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-颜色通道" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
