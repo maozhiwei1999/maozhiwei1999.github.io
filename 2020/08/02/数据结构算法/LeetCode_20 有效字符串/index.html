@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>My First Blog | Hexo</title>
+  <title>数据结构算法/LeetCode_20 有效字符串 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="My First Blog">
-<meta property="og:url" content="http://yoursite.com/2020/07/14/My-First-Blog/index.html">
+  <meta name="description" content="leetCode 20 有效的括号给定一个只包括 &#39;(&#39; ，&#39;)&#39; ，&#39;{&#39; ，&#39;}&#39; ，&#39;[&#39; ，&#39;]&#39; 的字符串，判断字符串是否有效。 有效字符串需满足： 左括号必须用相同类型的右括号闭合。左括号必须以正确的顺序闭合。注意空字符串可被认为是有效字符串。 可以用栈的思想来解决这个问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构算法&#x2F;LeetCode_20 有效字符串">
+<meta property="og:url" content="http://yoursite.com/2020/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/LeetCode_20%20%E6%9C%89%E6%95%88%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="leetCode 20 有效的括号给定一个只包括 &#39;(&#39; ，&#39;)&#39; ，&#39;{&#39; ，&#39;}&#39; ，&#39;[&#39; ，&#39;]&#39; 的字符串，判断字符串是否有效。 有效字符串需满足： 左括号必须用相同类型的右括号闭合。左括号必须以正确的顺序闭合。注意空字符串可被认为是有效字符串。 可以用栈的思想来解决这个问题">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-14T09:48:46.000Z">
-<meta property="article:modified_time" content="2020-07-14T09:48:46.783Z">
+<meta property="og:image" content="http://yoursite.com/2020/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/LeetCode_20%20%E6%9C%89%E6%95%88%E5%AD%97%E7%AC%A6%E4%B8%B2/DraggedImage.png">
+<meta property="article:published_time" content="2020-08-02T14:55:59.411Z">
+<meta property="article:modified_time" content="2020-08-02T14:58:25.651Z">
 <meta property="article:author" content="Malcolm">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/LeetCode_20%20%E6%9C%89%E6%95%88%E5%AD%97%E7%AC%A6%E4%B8%B2/DraggedImage.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -45,7 +49,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/Users/malcolm/blog/themes/yilia/assets/img/headImage.JPG" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Malcolm</a></h1>
@@ -81,11 +85,13 @@
 				
 					<a class="github" target="_blank" href="/maozhiwei1999.github.com" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weibo" target="_blank" href="http://weibo.com/6321355757/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="weixin" target="_blank" href="/mao1370221438" title="weixin"><i class="icon-weixin"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="bilibili" target="_blank" href="https://space.bilibili.com/174885843" title="bilibili"><i class="icon-bilibili"></i></a>
+		        
+					<a class="mail" target="_blank" href="/maozhiwei1999@icloud.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -103,7 +109,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/Users/malcolm/blog/themes/yilia/assets/img/headImage.JPG" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Malcolm</h1>
@@ -122,11 +128,13 @@
 					
 						<a class="github" target="_blank" href="/maozhiwei1999.github.com" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weibo" target="_blank" href="http://weibo.com/6321355757/profile?rightmod=1&wvr=6&mod=personinfo" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="weixin" target="_blank" href="/mao1370221438" title="weixin"><i class="icon-weixin"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/174885843" title="bilibili"><i class="icon-bilibili"></i></a>
+			        
+						<a class="mail" target="_blank" href="/maozhiwei1999@icloud.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -152,27 +160,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-My-First-Blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数据结构算法/LeetCode_20 有效字符串" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      My First Blog
+      数据结构算法/LeetCode_20 有效字符串
     </h1>
   
 
         
-        <a href="/2020/07/14/My-First-Blog/" class="archive-article-date">
-  	<time datetime="2020-07-14T09:48:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+        <a href="/2020/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/LeetCode_20%20%E6%9C%89%E6%95%88%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-article-date">
+  	<time datetime="2020-08-02T14:55:59.411Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="leetCode-20-有效的括号"><a href="#leetCode-20-有效的括号" class="headerlink" title="leetCode 20 有效的括号"></a>leetCode 20 有效的括号</h2><p><code>给定一个只包括 &#39;(&#39; ，&#39;)&#39; ，&#39;{&#39; ，&#39;}&#39; ，&#39;[&#39; ，&#39;]&#39; 的字符串，判断字符串是否有效。</code></p>
+<p>有效字符串需满足：</p>
+<p>左括号必须用相同类型的右括号闭合。<br>左括号必须以正确的顺序闭合。<br>注意空字符串可被认为是有效字符串。</p>
+<p><strong>可以用栈的思想来解决这个问题</strong></p>
+<a id="more"></a>
+<p>假设传入的字符串是这样的：<br><code>{([][]())}</code><br>那么可以依次将这些括号放入栈中，当碰到与栈顶左括号相匹配的右括号时，就将这一对括号从栈中pop出去，执行完所有的括号操作后，判断栈是否为空。<br>为空则说明所有传入的字符串中的括号都成功进行配对，括号有效。<br>不为空说明传入的括号非法。<br><img src="DraggedImage.png" alt=""></p>
+<p>代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line"> <span class="comment">//先判断字符串的长度是不是偶数，如果不是说明一定有括号落单，返回false。</span></span><br><span class="line">        <span class="keyword">if</span>( s.size() % <span class="number">2</span> )&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//建数组模拟栈</span></span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt; <span class="built_in">stack</span>;</span><br><span class="line">        <span class="keyword">char</span> left ; <span class="comment">//left来存放左括号，便于与right进行匹配。</span></span><br><span class="line">        <span class="comment">//用right去遍历字符串</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> right : s)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(right == <span class="string">'&#125;'</span> || right == <span class="string">')'</span> || right == <span class="string">']'</span>)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(!<span class="built_in">stack</span>.empty())&#123;</span><br><span class="line">                    left = <span class="built_in">stack</span>[<span class="built_in">stack</span>.size() - <span class="number">1</span>];</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(right == <span class="string">'&#125;'</span> &amp;&amp; left != <span class="string">'&#123;'</span>)&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(right == <span class="string">']'</span> &amp;&amp; left != <span class="string">'['</span>)&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(right == <span class="string">')'</span> &amp;&amp; left != <span class="string">'('</span>)&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            	&#125;</span><br><span class="line"></span><br><span class="line">            	<span class="built_in">stack</span>.pop_back();</span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="built_in">stack</span>.push_back(right);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">stack</span>.empty();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><p>先判断传入的字符串数组的长度是否为偶数，如果不是偶数，说明一定有括号落单，返回false。<br>接下来用数组来模拟栈的操作，再建立一个char变量保存左括号。<br>用right变量去遍历这个传入的字符串S中的字符。<br>从第一个字符开始，将这些字符先给right变量，接着对right变量进行检验:<br>如果right变量接受到的字符不是右括号类型的，就把这个字符重新放回到数组的最后。</p>
+<p>继续进行遍历，直到right接收到了右括号类型。<br>right接收到了右括号类型后，判断数组是否为空，如果为空，就返回false，不为空将数组中的最后一个元素(肯定是左括号类型)赋值给left变量。</p>
+<p>接着进行匹配，如果此时的右括号和左括号没有配对成功，返回false，如果配对成功了就将数组中的最后一个元素删除。<br>遍历完全部字符后，检查数组是否为空，为空则传入的字符串括号有效。</p>
+<p>拿上面的例子来看：<br>传入 <code>{([][]())}</code><br>首先 长度为10，是偶数，不存在落单的字符。<br>接着遍历。</p>
+<ol>
+<li>right先取<code>{</code>,不是右括号类型，放入数组：<code>stack.push_back(right);</code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[        &#123;           ] <span class="comment">//数组中只有一个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>接着是<code>(</code>,不是右括号，放入数组最后：<code>stack.push_back(right);</code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[      &#123; 、(            ] <span class="comment">//数组中有两个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>接着是<code>[</code>,不是右括号，放入数组最后：<code>stack.push_back(right);</code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[     &#123; 、( 、[         ] <span class="comment">//数组中有三个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>接着是<code>]</code>,是右括号。判断一下数组是否为空？<br>不为空。将数组中的最后一个元素(上一个压入数组的左括号)赋值给left，将left和right进行配对： <code>]</code> 和 <code>[</code><br>配对成功，将数组中的最后一个元素删除 <code>stack.pop_back();</code> 数组变成了：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[      &#123; 、(           ]  <span class="comment">//数组中有两个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>继续遍历，right取到 <code>[</code> ,不是右括号，放入数组最后<code>stack.push_back(right);</code>数组变成了：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[     &#123; 、( 、[        ] <span class="comment">//数组中有三个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>right取到<code>]</code> 与步骤4操作相同，数组变成了：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[      &#123; 、（          ]  <span class="comment">//数组中有两个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>right取到<code>(</code>,不是右括号，放入数组变成了：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[     &#123; 、( 、(       ] <span class="comment">//数组中有三个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>right取到<code>)</code>,是右括号，与步骤4操作相同，数组变成了：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[      &#123; 、(           ]  <span class="comment">//数组中有两个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>right取到<code>)</code>,是右括号，重复步骤4，数组变成了：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[      &#123;           ]  <span class="comment">//数组中有一个元素</span></span><br></pre></td></tr></table></figure></li>
+<li>right取到了<code>}</code>，是右括号，重复步骤4，数组变成了：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[                  ] &#x2F;&#x2F;数组中没有元素</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>循环遍历结束后，如果数组为空，返回true，否则返回false:<code>return stack.empty();</code></p>
+
       
 
       
@@ -185,9 +221,19 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的慷慨解囊<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/Users/malcolm/blog/themes/yilia/assets/img/AliPay.JPG">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/Users/malcolm/blog/themes/yilia/assets/img/wechatPay.JPG">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -251,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/My-First-Blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AE%97%E6%B3%95/LeetCode_20%20%E6%9C%89%E6%95%88%E5%AD%97%E7%AC%A6%E4%B8%B2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -265,18 +311,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/15/%E9%A2%9C%E8%89%B2%E9%80%9A%E9%81%93/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/08/02/iOS%E5%BC%80%E5%8F%91/UIAppearance/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          颜色通道
+          iOS开发/UIAppearance
         
       </div>
     </a>
   
   
-    <a href="/2020/07/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/07/15/iOS%E5%BC%80%E5%8F%91/%E9%A2%9C%E8%89%B2%E9%80%9A%E9%81%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS开发/颜色通道</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -450,27 +496,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://space.bilibili.com/174885843" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>B站链接</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="http://weibo.com/6321355757/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>微博主页</a>
             </li>
           
         </ul>
@@ -481,7 +511,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">认真学习，不断进步。</div>
   	  	
     	</section>
     
